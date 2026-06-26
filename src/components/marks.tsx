@@ -14,8 +14,7 @@ type MarkProps = {
   id?: string;
 };
 
-export function CustomizedMark({ size = 34, className, id = "c" }: MarkProps) {
-  const gradId = `customized-ink-${id}`;
+export function CustomizedMark({ size = 34, className }: MarkProps) {
   return (
     <svg
       width={size}
@@ -25,20 +24,20 @@ export function CustomizedMark({ size = 34, className, id = "c" }: MarkProps) {
       role="img"
       aria-label="Customized"
     >
-      <defs>
-        <linearGradient id={gradId} x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#171d28" />
-          <stop offset="1" stopColor="#0a0e15" />
-        </linearGradient>
-      </defs>
-      <rect width="64" height="64" rx="15" fill={`url(#${gradId})`} />
-      <rect x="14" y="14" width="8" height="8" rx="2.5" fill="#f6f7f9" />
-      <rect x="14" y="26" width="8" height="8" rx="2.5" fill="#f6f7f9" />
-      <rect x="14" y="38" width="8" height="8" rx="2.5" fill="#f6f7f9" />
-      <rect x="26" y="14" width="8" height="8" rx="2.5" fill="#f6f7f9" />
-      <rect x="26" y="38" width="8" height="8" rx="2.5" fill="#f6f7f9" />
-      <rect x="38" y="38" width="8" height="8" rx="2.5" fill="#f6f7f9" />
-      <rect x="38" y="14" width="8" height="8" rx="2.5" fill="#5b6cff" />
+      <rect width="64" height="64" rx="15" fill="#12161e" />
+      {/* empty slot — the missing module, top-right */}
+      <rect x="38" y="15" width="11" height="11" rx="3" fill="#242d41" />
+      {/* eight placed modules */}
+      <rect x="13" y="15" width="11" height="11" rx="3" fill="#eef1f6" />
+      <rect x="25.5" y="15" width="11" height="11" rx="3" fill="#eef1f6" />
+      <rect x="13" y="27.5" width="11" height="11" rx="3" fill="#eef1f6" />
+      <rect x="25.5" y="27.5" width="11" height="11" rx="3" fill="#eef1f6" />
+      <rect x="38" y="27.5" width="11" height="11" rx="3" fill="#eef1f6" />
+      <rect x="13" y="40" width="11" height="11" rx="3" fill="#eef1f6" />
+      <rect x="25.5" y="40" width="11" height="11" rx="3" fill="#eef1f6" />
+      <rect x="38" y="40" width="11" height="11" rx="3" fill="#eef1f6" />
+      {/* the custom piece — lifted up & to the right */}
+      <rect x="43" y="8" width="12" height="12" rx="3" fill="#5b6cff" />
     </svg>
   );
 }
