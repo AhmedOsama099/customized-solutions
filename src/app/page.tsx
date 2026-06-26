@@ -7,7 +7,7 @@ const CONTACT_EMAIL = "ahmedeng099@gmail.com";
 const WHATSAPP_NUMBER = "201011494459";
 const WHATSAPP_DISPLAY = "+20 101 149 4459";
 const PORTFOLIO_URL = "https://ahmedosamadev.vercel.app";
-const MIHNA_URL = "https://malafpro.com";
+const MIHNA_URL = "https://portfolio-model-peach.vercel.app/mihna";
 
 const NAV = [
   { href: "#what", label: "What we do" },
