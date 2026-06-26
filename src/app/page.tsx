@@ -5,7 +5,6 @@ import { cn } from "@/lib/cn";
 
 const CONTACT_EMAIL = "ahmedeng099@gmail.com";
 const WHATSAPP_NUMBER = "201011494459";
-const WHATSAPP_DISPLAY = "+20 101 149 4459";
 const PORTFOLIO_URL = "https://ahmedosamadev.vercel.app";
 const MIHNA_URL = "https://portfolio-model-peach.vercel.app/mihna";
 
@@ -435,17 +434,6 @@ function Footer() {
           </div>
 
           <div className="flex items-start gap-9">
-            <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={footerLink}
-            >
-              <WhatsAppIcon size={22} />
-              <span className="text-[13px] font-medium tabular-nums">
-                {WHATSAPP_DISPLAY}
-              </span>
-            </a>
             <a
               href={PORTFOLIO_URL}
               target="_blank"
