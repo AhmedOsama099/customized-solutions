@@ -36,9 +36,9 @@ const tajawal = Tajawal({
 });
 
 export const metadata: Metadata = {
-  title: "Customized — software, tailored to fit.",
+  title: "Customized Solutions — software, tailored to fit.",
   description:
-    "Customized is a product studio. We design and ship software end-to-end — from the first sketch to a live product on its own domain. Mihna, our platform for professional websites, is the first of them.",
+    "Customized Solutions is a product studio. We design and ship software end-to-end — from the first sketch to a live product on its own domain. Mihna, our platform for professional websites, is the first of them.",
   keywords: [
     "software studio",
     "product studio",
@@ -47,13 +47,12 @@ export const metadata: Metadata = {
     "multi-tenant platform",
     "Mihna",
   ],
-  metadataBase: new URL("https://customized.dev"),
   openGraph: {
-    title: "Customized — software, tailored to fit.",
+    title: "Customized Solutions — software, tailored to fit.",
     description:
       "A product studio that designs and ships software end-to-end. Mihna is our flagship.",
     type: "website",
-    siteName: "Customized",
+    siteName: "Customized Solutions",
   },
 };
 

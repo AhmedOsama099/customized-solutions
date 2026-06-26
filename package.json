@@ -2,7 +2,7 @@
   "name": "customized-solutions",
   "version": "0.1.0",
   "private": true,
-  "description": "Customized — a product studio. We build software, tailored to fit.",
+  "description": "Customized Solutions — a product studio. We build software, tailored to fit.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

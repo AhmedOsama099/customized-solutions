@@ -1,9 +1,12 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { CustomizedMark, MihnaMark } from "@/components/marks";
+import { ArrowRight, Paperclip } from "lucide-react";
+import { CustomizedMark, MihnaMark, WhatsAppIcon } from "@/components/marks";
 import { cn } from "@/lib/cn";
 
-const CONTACT_EMAIL = "hello@customized.dev";
+const CONTACT_EMAIL = "ahmedeng099@gmail.com";
+const WHATSAPP_NUMBER = "201011494459";
+const WHATSAPP_DISPLAY = "+20 101 149 4459";
+const PORTFOLIO_URL = "https://ahmedosamadev.vercel.app";
 const MIHNA_URL = "https://malafpro.com";
 
 const NAV = [
@@ -101,7 +104,7 @@ function Header() {
         <Link href="#top" className="flex items-center gap-[11px] text-ink">
           <CustomizedMark size={34} id="hdr" />
           <span className="font-display text-[19px] font-bold tracking-[-0.02em]">
-            Customized
+            Customized Solutions
           </span>
         </Link>
         <nav className="flex items-center gap-1.5 text-sm">
@@ -151,9 +154,9 @@ function Hero() {
         </h1>
 
         <p className="mx-auto mt-[26px] max-w-[620px] text-pretty text-[19px] leading-[1.6] text-muted">
-          Customized is a product studio. We design and ship software
-          end-to-end — from the first sketch to a live product on its own
-          domain. <span className="font-semibold text-ink">Mihna</span>, our
+          Customized Solutions is a product studio. We design and ship
+          software end-to-end — from the first sketch to a live product on its
+          own domain. <span className="font-semibold text-ink">Mihna</span>, our
           platform for professional websites, is the first of them.
         </p>
 
@@ -168,7 +171,7 @@ function Hero() {
 
         <div className="mt-10 font-mono text-[12.5px] tracking-[0.05em] text-muted-3">
           <span className="text-accent">const</span> studio ={" "}
-          <span className="text-teal">&quot;Customized&quot;</span>;{" "}
+          <span className="text-teal">&quot;Customized Solutions&quot;</span>;{" "}
           <span className="text-[#b4bcca]">// product · platform · partnership</span>
         </div>
       </div>
@@ -399,10 +402,15 @@ function Cta() {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-[13px]">
             <a href={`mailto:${CONTACT_EMAIL}`} className={primaryBtn}>
-              {CONTACT_EMAIL}
+              Contact us <ArrowRight size={17} strokeWidth={2.4} />
             </a>
-            <a href="#work" className={outlineBtn}>
-              See our work
+            <a
+              href={`https://wa.me/${WHATSAPP_NUMBER}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={outlineBtn}
+            >
+              <WhatsAppIcon size={18} className="text-[#25d366]" /> WhatsApp
             </a>
           </div>
         </div>
@@ -411,16 +419,47 @@ function Cta() {
   );
 }
 
+const footerLink =
+  "flex flex-col items-center gap-1.5 text-muted transition-colors hover:text-ink";
+
 function Footer() {
   return (
     <footer className="border-t border-border-soft bg-band">
-      <div className="mx-auto flex max-w-[1120px] flex-wrap items-center justify-between gap-5 px-7 py-11">
-        <div className="flex items-center gap-[11px]">
-          <CustomizedMark size={30} id="ftr" />
-          <span className="font-display text-[17px] font-bold">Customized</span>
+      <div className="mx-auto max-w-[1120px] px-7 py-11">
+        <div className="flex flex-wrap items-center justify-between gap-8">
+          <div className="flex items-center gap-[11px]">
+            <CustomizedMark size={30} id="ftr" />
+            <span className="font-display text-[17px] font-bold">
+              Customized Solutions
+            </span>
+          </div>
+
+          <div className="flex items-start gap-9">
+            <a
+              href={`https://wa.me/${WHATSAPP_NUMBER}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={footerLink}
+            >
+              <WhatsAppIcon size={22} />
+              <span className="text-[13px] font-medium tabular-nums">
+                {WHATSAPP_DISPLAY}
+              </span>
+            </a>
+            <a
+              href={PORTFOLIO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={footerLink}
+            >
+              <Paperclip size={22} strokeWidth={1.8} />
+              <span className="text-[13px] font-medium">Portfolio</span>
+            </a>
+          </div>
         </div>
-        <p className="font-mono text-[13.5px] text-muted-3">
-          © 2026 Customized — software, tailored.
+
+        <p className="mt-9 border-t border-border-soft pt-7 text-center font-mono text-[13.5px] text-muted-3">
+          © 2026 Customized Solutions — software, tailored.
         </p>
       </div>
     </footer>
